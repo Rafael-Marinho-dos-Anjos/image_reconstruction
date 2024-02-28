@@ -2,7 +2,7 @@
 import torch
 from torch import nn
 import torch.nn.functional as F
-from dataset import CustomDataset
+from torchsummary import summary
 from torchvision.transforms import Resize, InterpolationMode
 
 
@@ -126,7 +126,5 @@ class Model(nn.Module):
         return x_3
 
 if __name__ == "__main__":
-    ds = CustomDataset()
     model = Model()
-
-    print(model(ds[1][0].unsqueeze(0)).shape)
+    summary(model, (3, 360, 360))   

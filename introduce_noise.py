@@ -5,9 +5,9 @@ from copy import deepcopy
 from numpy import zeros
 
 
-EXAMPLES_PER_IMAGE = 5
-MIN_WINDOW_SIZE = 0.05
-MAX_WINDOW_SIZE = 0.15
+EXAMPLES_PER_IMAGE = 10
+MIN_WINDOW_SIZE = 0.1
+MAX_WINDOW_SIZE = 0.2
 
 images = listdir("gt")
 
